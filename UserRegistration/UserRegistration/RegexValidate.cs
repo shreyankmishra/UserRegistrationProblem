@@ -9,6 +9,7 @@ namespace UserRegistration
     {
         public static string Regex_FirstName = "^[A-Z]{1}[a-z]{2,}$";
         public static string Regex_LastName = "^[A-Z]{1}[a-z]{2,}$";
+        public static string Regex_Email = "^[0-9a-zA-Z]{1,}([._+-][0-9a-zA-Z]{0,})*[@][0-9a-zA-Z]{1,}.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
         public bool ValidateFirstName(string first)
         {
             return Regex.IsMatch(first, Regex_FirstName);
@@ -16,6 +17,10 @@ namespace UserRegistration
         public bool ValidateLastName(string last)
         {
             return Regex.IsMatch(last, Regex_LastName);
+        }
+        public bool ValidateEmail(string email)
+        {
+            return Regex.IsMatch(email, Regex_Email);
         }
         public void PrintResult(bool result)
         {
