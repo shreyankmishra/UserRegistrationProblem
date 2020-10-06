@@ -11,7 +11,7 @@ namespace UserRegistration
         public static string Regex_LastName = "^[A-Z]{1}[a-z]{2,}$";
         public static string Regex_Email = "^[0-9a-zA-Z]{1,}([._+-][0-9a-zA-Z]{0,})*[@][0-9a-zA-Z]{1,}.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
         public static string Regex_MobileNo = "^[1-9]{1}[0-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
-        public static string Regex_Password = "^[A-Za-z0-9!@#$%^&*]{8,}$";
+        public static string Regex_Password = "^(?=.*?[A-Z])[A-Za-z0-9!@#$%^&*]{8,}$";
         public bool ValidateFirstName(string first)
         {
             return Regex.IsMatch(first, Regex_FirstName);
