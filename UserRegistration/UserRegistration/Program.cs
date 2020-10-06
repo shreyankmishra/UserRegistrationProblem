@@ -19,6 +19,10 @@ namespace UserRegistration
             string eMailId = Console.ReadLine();
             bool emailResult = validateUser.ValidateEmail(eMailId);
             validateUser.PrintResult(emailResult);
+            Console.WriteLine("Enter your mobile no: ");
+            string mobileNo = Console.ReadLine();
+            bool mobileResult = validateUser.ValidateMobileNo(mobileNo);
+            validateUser.PrintResult(mobileResult);
         }
     }
 }
