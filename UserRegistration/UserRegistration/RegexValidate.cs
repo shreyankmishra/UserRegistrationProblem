@@ -18,9 +18,9 @@ namespace UserRegistration
         {
             return Regex.IsMatch(last, Regex_LastName);
         }
-        public bool ValidateEmail(string email)
+        public bool ValidateEmail(string emailId)
         {
-            return Regex.IsMatch(email, Regex_Email);
+            return Regex.IsMatch(emailId, Regex_Email);
         }
         public void PrintResult(bool result)
         {
