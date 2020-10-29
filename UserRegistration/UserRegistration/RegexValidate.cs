@@ -25,30 +25,12 @@ namespace UserRegistration
             "abc@gmail.com.com",
             "abc+100@gmail.com"
         };
-        public bool ValidateFirstName(string first)
-        {
-            return Regex.IsMatch(first, Regex_FirstName);
-        }
-        public bool ValidateLastName(string last)
-        {
-            return Regex.IsMatch(last, Regex_LastName);
-        }
-        public bool ValidateEmail(string emailId)
-        {
-            return Regex.IsMatch(emailId, Regex_Email);
-        }
-        public bool ValidateMobileNo(string mobileNo)
-        {
-            return Regex.IsMatch(mobileNo, Regex_MobileNo);
-        }
-        public bool ValidatePassword(string password)
-        {
-            return Regex.IsMatch(password, Regex_Password);
-        }
-        public bool ValidateEmailSamples(string emailId)
-        {
-            return Regex.IsMatch(emailId, Regex_EmailAll);
-        }
+        public bool ValidateFirstName(string first) => (Regex.IsMatch(first, Regex_FirstName));
+        public bool ValidateLastName(string last) => (Regex.IsMatch(last, Regex_LastName));
+        public bool ValidateEmail(string emailId) => (Regex.IsMatch(emailId, Regex_Email));
+        public bool ValidateMobileNo(string mobileNo) => (Regex.IsMatch(mobileNo, Regex_MobileNo));
+        public bool ValidatePassword(string password) => (Regex.IsMatch(password, Regex_Password));
+        public bool ValidateEmailSamples(string emailId) => (Regex.IsMatch(emailId, Regex_EmailAll));
         public List<string> GetList()
         {
             return sampleEmails;
